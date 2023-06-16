@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Admin Panel</title>
+</head>
+<body>
+    {% for username, user in users.items() %}
+        <h3>{{ username }}</h3>
+        <p>Email: {{ user.email }}</p>
+        <p>Status: {% if user.active %}Active{% else %}Inactive{% endif %}</p>
+        <a href="/admin/activate/{{ username }}">Toggle Activation</a>
+    {% endfor %}
+</body>
+</html>

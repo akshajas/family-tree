@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Family Tree</title>
+</head>
+<body>
+    <h2>Family Tree</h2>
+    <ul>
+        {% for member in family %}
+            <li>{{ member.name }} - {{ member.relationship }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
